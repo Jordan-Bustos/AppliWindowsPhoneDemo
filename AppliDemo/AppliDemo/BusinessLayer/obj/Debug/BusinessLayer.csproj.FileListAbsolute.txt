@@ -1,0 +1,12 @@
+U:\licencePM\P3\WindowsPhone\Project\Help\BusinessLayer\Bin\Debug\BusinessLayer.dll
+U:\licencePM\P3\WindowsPhone\Project\Help\BusinessLayer\Bin\Debug\BusinessLayer.pdb
+U:\licencePM\P3\WindowsPhone\Project\Help\BusinessLayer\obj\Debug\BusinessLayer.dll
+U:\licencePM\P3\WindowsPhone\Project\Help\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Travail\AppliDemo\AppliDemo\BusinessLayer\Bin\Debug\BusinessLayer.dll
+C:\Travail\AppliDemo\AppliDemo\BusinessLayer\Bin\Debug\BusinessLayer.pdb
+C:\Travail\AppliDemo\AppliDemo\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Travail\AppliDemo\AppliDemo\BusinessLayer\obj\Debug\BusinessLayer.pdb
+U:\licencePM\P3\WindowsPhone\Project\AppliDemo\AppliDemo\BusinessLayer\Bin\Debug\BusinessLayer.dll
+U:\licencePM\P3\WindowsPhone\Project\AppliDemo\AppliDemo\BusinessLayer\Bin\Debug\BusinessLayer.pdb
+U:\licencePM\P3\WindowsPhone\Project\AppliDemo\AppliDemo\BusinessLayer\obj\Debug\BusinessLayer.dll
+U:\licencePM\P3\WindowsPhone\Project\AppliDemo\AppliDemo\BusinessLayer\obj\Debug\BusinessLayer.pdb

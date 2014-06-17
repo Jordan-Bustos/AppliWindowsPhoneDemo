@@ -1,0 +1,103 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="AppliDemo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True"
+    
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:my="clr-namespace:AppliDemo" Loaded="PhoneApplicationPage_Loaded"
+    
+    xmlns:utils="clr-namespace:AppliDemo.Utils"
+    >
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        
+        <Grid.Resources>
+            <utils:SourceImageConverter x:Key="Convert" />                
+        </Grid.Resources>
+
+        <controls:Pivot Title="Mes lieux">
+
+            <controls:PivotItem Header="Fiche">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1.5*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Vertical" Grid.Column="0">
+                            <TextBlock Grid.Row="0" Text="{Binding Nom}"/>
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Note : " VerticalAlignment="Center"/>
+                                <!--<my:UserControlNote NbStars="{Binding Note}" Grid.Column="1"/>-->
+                                <my:UserControlNote NbStars="5" Note="{Binding Note}" Grid.Column="1"/>
+                            </Grid>
+                        </StackPanel>
+                        <Image Source="{Binding UnePhoto, Converter={StaticResource Convert}}" Grid.Column="1"/>
+                    </Grid>
+
+                    <TextBlock Grid.Row="1">
+                        <Run Text="Description:" FontWeight="Bold" />
+                        <LineBreak/>
+                        <Run Text="{Binding Description}"/>
+                    </TextBlock>
+
+                    <my:UserControlContact Personne="Prenom Nom"
+                                           Email="prenom.nom@etu.udamail.fr"
+                                           SiteWeb="http://www.google.com"
+                                           Grid.Row="2"/>
+
+                </Grid>
+            </controls:PivotItem>
+
+            <controls:PivotItem Header="Photos">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="7*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Orientation="Horizontal" Grid.Row="0">
+                        <TextBlock Text="{Binding Nom}"/>
+                        <Button Content="Ajouter"/>
+                    </StackPanel>
+
+                    <ScrollViewer Grid.Row="1">
+                        <toolkit:WrapPanel Orientation="Horizontal">
+                            <Image Source="Images/IUT.png"/>
+                            <Image Source="Images/jardin_lecoq.jpg" />
+                            <Image Source="Images/KinectSnapshot-11-13-15.png"/>
+                            <Image Source="Images/murol2.jpg"/>
+                        </toolkit:WrapPanel>
+                    </ScrollViewer>
+                </Grid>
+            </controls:PivotItem>
+
+        </controls:Pivot>
+    </Grid>
+    
+</phone:PhoneApplicationPage>

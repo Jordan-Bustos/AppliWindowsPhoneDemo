@@ -1,0 +1,4 @@
+U:\licencePM\P3\WindowsPhone\Project\Help\BusinessLayer\Bin\Release\BusinessLayer.dll
+U:\licencePM\P3\WindowsPhone\Project\Help\BusinessLayer\Bin\Release\BusinessLayer.pdb
+U:\licencePM\P3\WindowsPhone\Project\Help\BusinessLayer\obj\Release\BusinessLayer.dll
+U:\licencePM\P3\WindowsPhone\Project\Help\BusinessLayer\obj\Release\BusinessLayer.pdb

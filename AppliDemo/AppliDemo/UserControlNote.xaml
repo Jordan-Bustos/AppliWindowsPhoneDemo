@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="AppliDemo.UserControlNote"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    d:DesignHeight="62" d:DesignWidth="202"
+             
+    x:Name="userControlNote"
+    xmlns:my="clr-namespace:AppliDemo"  
+    >
+    
+    <Grid x:Name="LayoutRoot" 
+          ManipulationStarted="LayoutRoot_ManipulationStarted"
+          ManipulationCompleted="LayoutRoot_ManipulationCompleted" 
+          ManipulationDelta="LayoutRoot_ManipulationDelta" 
+          Background="Transparent" 
+          />
+
+    <!--Background="Transparent" : pour dire que la grille n'est pas visible 
+    mais qu'elle est sélectionnable (peut capter les évènements)-->
+</UserControl>

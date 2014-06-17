@@ -1,0 +1,29 @@
+﻿<Application 
+    x:Class="AppliDemo.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    
+    xmlns:myNav="clr-namespace:System.Windows.Navigation;assembly=Microsoft.Phone"
+    >
+
+    <!--Ressources d'applications-->
+    <Application.Resources>
+        
+        <myNav:UriMapper x:Name="UriMapper">
+            <myNav:UriMapper.UriMappings>
+                <myNav:UriMapping Uri="/Lieu/{lieu}" MappedUri="/MainPage.xaml?Lieu={lieu}"/>
+            </myNav:UriMapper.UriMappings>
+        </myNav:UriMapper>
+        
+    </Application.Resources>
+
+    <Application.ApplicationLifetimeObjects>
+        <!--Objet requis qui gère les événements de durée de vie pour l'application-->
+        <shell:PhoneApplicationService 
+            Launching="Application_Launching" Closing="Application_Closing" 
+            Activated="Application_Activated" Deactivated="Application_Deactivated"/>
+    </Application.ApplicationLifetimeObjects>
+
+</Application>
