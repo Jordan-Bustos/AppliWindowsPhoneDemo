@@ -63,9 +63,11 @@
                         <Run Text="{Binding Description}"/>
                     </TextBlock>
 
-                    <my:UserControlContact Personne="Prenom Nom"
-                                           Email="prenom.nom@etu.udamail.fr"
-                                           SiteWeb="http://www.google.com"
+                    <my:UserControlContact Personne="{Binding Contact.Personne}"
+                                           Email="{Binding Contact.Courriel}"
+                                           SiteWeb="{Binding Contact.Url}"
+                                           
+                                           
                                            Grid.Row="2"/>
 
                 </Grid>
